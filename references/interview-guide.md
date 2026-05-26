@@ -27,6 +27,48 @@ Match their pace. Skip the explanations they obviously don't need. Ask precise q
 ### The user has no technical background at all
 Replace jargon with metaphors. "Database" becomes "where information is stored." "API" becomes "how different parts of the system talk to each other." Focus heavily on user journeys — concrete steps are easier to discuss than abstract architecture.
 
+## Mode-specific scenarios
+
+### Retrospective mode: user doesn't know their own codebase well
+
+Some users inherit a codebase — they didn't write it but are now responsible for it. They may struggle to answer questions about what the code does. In this case:
+
+- Lead with your own findings: "From what I can see in the code, it looks like..."
+- Let the user confirm or correct, rather than expecting them to describe from scratch
+- Focus the interview on what they WANT (future state), not what IS (you already know)
+
+### Retrospective mode: user is defensive about their code
+
+Some users feel judged when you point out issues. Frame findings constructively:
+
+- Instead of "You have no tests," say "I notice there aren't tests yet — is that something you'd like to address in the next phase?"
+- Instead of "The code structure is messy," say "Would reorganizing the code structure be part of this PRD effort?"
+- Always pair criticism with the opportunity to fix it — that's why they're here
+
+### Iteration mode: user wants "just one small change"
+
+Users often underestimate the impact of changes. If the user says "just add X":
+
+- Don't blindly add it. Check dependencies: "Adding X might affect Y and Z. Let me check..."
+- Surface ripple effects: a "simple" addition may need new API endpoints, database changes, new UI, new error handling
+- Let the user decide whether to proceed after they understand the full scope
+
+### Iteration mode: user can't articulate what changed
+
+Sometimes users know they're unhappy with the current PRD but can't pinpoint why. Help them:
+
+- "Let's walk through each module one by one. Tell me what you like and don't like about each."
+- "If you could only fix one thing about the current spec, what would it be?"
+- "Has anything changed in the business or the market since we wrote the original PRD?"
+
+### Iteration mode: chaining multiple iterations
+
+If the user has already iterated several times (v4, v5...), ask:
+
+- "What's driving the repeated changes? Is the problem the PRD, or is the product direction itself still evolving?"
+- Consider recommending fewer, larger iterations rather than many small ones
+- If the user seems stuck in a loop, suggest a fresh greenfield PRD instead of continued iteration
+
 ## Phase transition checklist
 
 Before moving from Phase N to N+1:
